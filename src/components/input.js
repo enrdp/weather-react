@@ -1,11 +1,10 @@
 import React from "react";
 
 function UserInput(props){
-    const {setCity, fetchWeather} = props
-     
+    const {setCity, fetchWeather, location} = props
 return (
 <div>
-<form onSubmit={(e)=> [fetchWeather(e)]}>
+<form className="form__input" onSubmit={(e)=> [fetchWeather(e)]}>
    <label>
   City:
   
@@ -15,10 +14,13 @@ return (
   required
   />
   </label>
-  <button onSubmit={(e)=>[fetchWeather(e)]}>Submit</button></form>
-  <nav className="navigation">
-  
-  </nav>
+
+  {location.pathname !== "/src/pages/compare" ? (
+  <button onSubmit={(e)=>[fetchWeather(e)]}>Submit</button>
+  ) : ("")
+  }
+  </form>
+
 </div>
     )
 }

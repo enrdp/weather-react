@@ -1,28 +1,24 @@
 import React from "react";
 
 function CompareCity(props){
-    const {setCityComp, setCityComp2, getAllData} = props
-     
+    const { setCityComp2, handleSubmit, cityComp2 } = props
+    
 return (
 <div>
-<form onSubmit={()=> [getAllData()]}>
-   <label>
-  City 1:
-  <input
-  type="text"
-  onChange={(e) => setCityComp(e.target.value)}
-  required
-  />
-  </label>
+<form onSubmit={handleSubmit}>
+
   <label>
   City 2
   </label>
   <input
   type="text"
-  onChange={(e) => setCityComp2(e.target.value)}
+  value={cityComp2}
+  onChange={(e) => {setCityComp2(e.target.value)}}
   required
   />
-  <button onSubmit={()=>[getAllData()]}>Submit</button></form>
+
+  <button onSubmit={handleSubmit}>Submit</button>
+  </form>
 </div>
     )
 }

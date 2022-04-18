@@ -1,13 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow} from 'swiper';
-import { Link } from "react-router-dom";
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../../App.css'
 import 'swiper/css/effect-coverflow';
+
 
 const UnsplashPhotoFunction = (props) => {
 const {dataP} = props;
@@ -16,24 +17,14 @@ if (!dataP) return null;
 
 
   return (
-    <div>
-      <Link to="/">Weather</Link>
-      <Link to="../src/pages/forecast">Forecast</Link>
+    <div className="unsplash__index">
+ 
      <Swiper
       modules={[Navigation, Pagination, EffectCoverflow ]}
-      effect='coverflow'
-      coverflowEffect={{
-        rotate: 40,
-        slideShadows: false,
-        stretch: 0,
-        depth: 2000,
-        modifier: 1,
-      }}
       autoHeight={true}
       grabCursor={true}
       centeredSlides={true}
       slidesPerView={1}
-      
       pagination={{ clickable: true }}
     >
       {dataP.results.map( (data,index) =>{

@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
+import "./asset/carousel.css"
 
 const container = document.getElementById('root');
 const root = createRoot(container);
