@@ -5,7 +5,7 @@ import "../../asset/navbar.css";
 
 
 const Layout = (props) => {
-    const {setCity, data, fetchWeather, location} = props;
+    const {setCity, fetchWeather, location} = props;
     const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
    <div>
