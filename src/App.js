@@ -48,7 +48,7 @@ const fetchWeather = async (e) => {
 const UnsplashPhoto = async() => {
   try {
     let keyUnsplash = "bpk9afODDxp6-XEZ6-YbgW99xc-5SKaBMG1dX_P6n3g";
-    const responseUnsplashPhoto = await axios(`https://api.unsplash.com/search/photos/?client_id=${keyUnsplash}&query=${city}&per_page=20`);
+    const responseUnsplashPhoto = await axios(`https://api.unsplash.com/search/photos/?client_id=${keyUnsplash}&query=${city}&per_page=10`);
     console.log(responseUnsplashPhoto.data)
     setDataP(responseUnsplashPhoto.data)
   } catch (error) {
@@ -77,8 +77,8 @@ const fetchWeatherForecast = async(datas) => {
          
         <Routes>
         <Route path="/" element={<Layout data={data} setCity={setCity} fetchWeather={fetchWeather} location={location}/>} >
-        <Route path="/src/pages/weather" element={<Weather data={data}/>} />
-        <Route path="src/pages/forecast" element={<WeatherForecast dataOneCall={dataOneCall} />} />
+        <Route path="/" element={<Weather data={data}/>} />
+        <Route path="src/pages/forecast" element={<WeatherForecast dataOneCall={dataOneCall} data={data}/>} />
         <Route path="src/pages/unsplash" element={<UnsplashPhotoFunction dataP={dataP}/>} />
         
         <Route path="/src/pages/compare" 

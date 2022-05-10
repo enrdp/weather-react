@@ -14,7 +14,7 @@ const WeatherGraph = (props) => {
       },
       title: {
         display: true,
-        text: 'Chart.js Bar Chart',
+        text: 'Graphic',
       },
     },
   };
@@ -37,9 +37,10 @@ const WeatherGraph = (props) => {
   };
 
 
-
+if (!nameCity2) return null;
   return (
-    <div>
+    <div className="chart">
+      <div className="banner__chart"></div>
               <Bar
                 data={data}
                 options={options}

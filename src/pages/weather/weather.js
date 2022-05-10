@@ -13,7 +13,7 @@ let dt = new Date(data.dt * 1000); //timestamp * 1000
 
 <div className="col weather_day">
       
-              <div className="card" id="card">
+              <div className="card__weather" id="card">
               <h5 className="card-title-weather">{dt.toDateString()}</h5>
               
               <div className="figure">
