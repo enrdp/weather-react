@@ -30,7 +30,7 @@ const flipCard = (i) => {
               
               <h2>{data.name} - {data.sys.country}</h2>
               <img
-                  src={"http://openweathermap.org/img/wn/" +
+                  src={"https://openweathermap.org/img/wn/" +
                   datas.weather[0].icon +
                   "@4x.png"}
                   className="card-img-top"
