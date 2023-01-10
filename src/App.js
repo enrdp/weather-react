@@ -63,7 +63,7 @@ const fetchWeatherForecast = async(datas) => {
     let lat = datas.coord.lat
     let lon = datas.coord.lon
     const responseOneCall = await axios(
-        `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`
       );
       console.log(responseOneCall.data)
       setDataOneCall(responseOneCall.data);
