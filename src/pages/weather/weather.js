@@ -19,7 +19,7 @@ let dt = new Date(data.dt * 1000); //timestamp * 1000
               <div className="figure">
               
                 <img
-                  src={`http://openweathermap.org/img/wn/${
+                  src={`https://openweathermap.org/img/wn/${
                     data.weather[0].icon
                   }@4x.png`}
                   className="card-img-top"
